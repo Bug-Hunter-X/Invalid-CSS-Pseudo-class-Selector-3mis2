@@ -1,0 +1,22 @@
+To resolve this, ensure you use valid CSS pseudo-class selectors. Here's how to fix the bug:
+
+**Method 1: Using the correct `:hover` pseudo-class (if that's the intent):**
+
+```css
+div:hover {
+  background-color: yellow;
+}
+```
+
+**Method 2: Using JavaScript to emulate the desired behavior (if the desired behavior is more complex than `:hover`):**
+
+```javascript
+const divElement = document.querySelector('div');
+divElement.addEventListener('mouseover', () => {
+divElement.style.backgroundColor = 'yellow';
+});
+divElement.addEventListener('mouseout', () => {
+divElement.style.backgroundColor = ''; // Reset to default
+});
+```
+This JavaScript code will change the background color of the div when the mouse hovers over it, and will revert it back on mouseout.
