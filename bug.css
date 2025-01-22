@@ -1,0 +1,9 @@
+The following CSS rule attempts to style an element based on a nonexistent pseudo-class selector:
+
+```css
+div::maybe-hover {
+  background-color: yellow;
+}
+```
+
+This will not cause a runtime error, but it will have no effect.  The `::maybe-hover` pseudo-class does not exist in CSS.  The intended effect may be achievable using JavaScript event listeners instead.
